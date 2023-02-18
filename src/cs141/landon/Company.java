@@ -62,9 +62,10 @@ public class Company {
             if (userVal > 0 && userVal <= max) {
                 return userVal;
             }
+        } else {
+            input.next();
         }
         System.out.println("Please enter a valid choice (between 1 and " + max + ")");
-        input.next();
         return -1;
     }
     public String getCompanyName() {
