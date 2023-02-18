@@ -18,6 +18,7 @@ public class Employee {
         this.employer = employer;
         this.count = count;
 
+        System.out.println();
         setName();
         setGender();
         setJobTitle();
