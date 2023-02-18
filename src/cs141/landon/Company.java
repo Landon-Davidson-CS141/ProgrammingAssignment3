@@ -35,15 +35,15 @@ public class Company {
     }
     public void updateEmployee(int index) {
         Employee temp = employees.get(index);
-        System.out.println("1. Name: " + temp.getName());
-        System.out.println("2. Gender: " + temp.getGender());
-        System.out.println("3. Job Title: " + temp.getJobTitle());
-        System.out.println("4. Birthday: " + temp.getBirthday());
-        System.out.println("5. Return to menu");
-        System.out.print("Which field would you like to edit? ");
 
         int editAction;
         do {
+            System.out.println("\n1. Name: " + temp.getName());
+            System.out.println("2. Gender: " + temp.getGender());
+            System.out.println("3. Job Title: " + temp.getJobTitle());
+            System.out.println("4. Birthday: " + temp.getBirthday());
+            System.out.println("5. Return to menu");
+            System.out.print("Which field would you like to edit? ");
             editAction = checkValidInput(input, 5);
         } while (editAction == -1);
         switch (editAction) {
