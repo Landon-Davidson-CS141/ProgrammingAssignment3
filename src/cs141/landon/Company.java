@@ -63,7 +63,7 @@ public class Company {
                 return userVal;
             }
         }
-        System.out.println("Please enter a valid choice (between 1 and " + max);
+        System.out.println("Please enter a valid choice (between 1 and " + max + ")");
         input.next();
         return -1;
     }
