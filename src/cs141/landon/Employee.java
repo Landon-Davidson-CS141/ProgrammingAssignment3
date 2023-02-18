@@ -1,3 +1,13 @@
+/*
+Name: Landon Davidson
+Section: 27258
+Program Name: Employee
+
+Description: Stores employee specific variables, such as name, id, and job title. Also has getter and setter methods for
+each variable with input detection for setGender and setBirthday to make sure it is a valid input. In the case of gender
+it checks for Male, Female, or Non-binary, and for birthday it checks for MM/DD/YYYY format.
+ */
+
 package cs141.landon;
 
 import java.util.Random;
@@ -48,7 +58,6 @@ public class Employee {
         return gender;
     }
 
-    // To-Do: Add Error detection to setGender()
     public void setGender() {
         while (true) {
             System.out.print("Enter " + employer + " Employee " + count + "'s gender (Male, Female, or Non-binary: ");
@@ -69,15 +78,10 @@ public class Employee {
         jobTitle = input.next();
     }
 
-    public int getID() {
-        return ID;
-    }
-
     public String getBirthday() {
         return birthday;
     }
 
-    // To-Do Add error detection to setBirthday()
     public void setBirthday() {
         do {
             System.out.print("Enter " + employer + " Employee " + count + "'s birthday (MM/DD/YYYY format): ");

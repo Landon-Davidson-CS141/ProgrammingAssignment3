@@ -1,3 +1,16 @@
+/*
+Name: Landon Davidson
+Section: 27258
+Program Name: Company
+
+Description: Creates an ArrayList of Employee objects called employees as well as a companyName String and companySize int.
+Has getters for companyName and companySize.
+Also has addEmployee(), removeEmployee(), updateEmployee(), printEmployee, and printAllEmployees()
+which are basically just interfaces to the employees ArrayList. Finally, there is checkValidInput(), which is a static
+method I use to check if an integer input is actually an int, and is within less than the max I pass to it. I use this
+in Company as well as in EmployeeManagementSystem whenever I need to ask the user for an int input.
+ */
+
 package cs141.landon;
 
 import java.util.ArrayList;

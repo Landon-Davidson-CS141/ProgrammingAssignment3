@@ -1,3 +1,13 @@
+/*
+Name: Landon Davidson
+Section: 27258
+Program Name: EmployeeManagementSystem
+
+Description: This program prompts the user for how many companies they want to create, then creates an array of Company
+objects called companies. Then the program enters a loop that prompts the user for what action they want to take from
+a list of "Add Employee", "Remove Employee", "Update Employee", "Print number of Employees", and "Print Employee Info".
+ */
+
 package cs141.landon;
 
 import java.util.Scanner;
