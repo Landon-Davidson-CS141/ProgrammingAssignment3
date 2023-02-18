@@ -4,16 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Company {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        Company company = new Company("Google", input);
-        company.addEmployee();
-        company.addEmployee();
-        company.updateEmployee(1);
-        company.printEmployee(1);
-        company.removeEmployee(0);
-        company.printAllEmployees();
-    }
     private final ArrayList<Employee> employees = new ArrayList<>();
     private final Scanner input;
     private final String companyName;
