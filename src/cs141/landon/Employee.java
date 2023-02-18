@@ -7,7 +7,7 @@ public class Employee {
     private static final Random rand = new Random();
     private final Scanner input;
     private final int ID = rand.nextInt(1000);
-    private final int count;
+    private int count;
     private String name;
     private String gender;
     private String jobTitle;
@@ -25,6 +25,7 @@ public class Employee {
     }
     public void printEmployee() {
         System.out.println("\n---------------------");
+        System.out.println(employer + " Employee number " + count + "'s information:");
         System.out.println("ID: " + ID);
         System.out.println("Name: " + name);
         System.out.println("Gender: " + gender);
@@ -101,5 +102,11 @@ public class Employee {
             }
         }
         return true;
+    }
+    public int getCount() {
+        return count;
+    }
+    public void setCount(int count) {
+        this.count = count;
     }
 }
