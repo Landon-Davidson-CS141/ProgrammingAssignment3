@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Employee {
-    private static Random rand = new Random();
+    private static final Random rand = new Random();
     private final Scanner input;
     private final int ID = rand.nextInt(1000);
     private final int count;
