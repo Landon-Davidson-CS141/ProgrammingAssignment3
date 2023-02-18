@@ -43,6 +43,7 @@ public class EmployeeManagementSystem {
                 case 1 -> addEmployee(companies, input);
                 case 2 -> removeEmployee(companies, input);
                 case 3 -> updateEmployee(companies, input);
+                case 4 -> printNumEmployees(companies, input);
 
             }
         } while (userAction != 6);
@@ -114,5 +115,30 @@ public class EmployeeManagementSystem {
         userEmployee--;
 
         companies[userCompany].updateEmployee(userEmployee);
+    }
+    public static void printNumEmployees(Company[] companies, Scanner input) {
+        System.out.println("1. Number of Employees in all companies");
+        for (int i = 0; i < companies.length; i++) {
+            System.out.println(i + 2 + ". Number of Employees in " + companies[i].getCompanyName());
+        }
+
+        int userCompany;
+        do {
+            System.out.print("Which company would you like to see info on? ");
+            userCompany = Company.checkValidInput(input, companies.length + 1);
+        } while (userCompany == -1);
+        userCompany -= 2;
+
+        System.out.println();
+        if (userCompany == -1) {
+            int totalEmployees = 0;
+            for (Company company : companies) {
+                totalEmployees += company.getCompanySize();
+            }
+            System.out.println("All of the companies together have " + totalEmployees + " employees");
+        } else {
+            Company temp = companies[userCompany];
+            System.out.println(temp.getCompanyName() + " has " + temp.getCompanySize() + " employees");
+        }
     }
 }
