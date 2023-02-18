@@ -17,15 +17,11 @@ public class Company {
         System.out.println();
     }
     public void removeEmployee(int index) {
-        if (employees.size() != 0) {
-            employees.remove(index);
-            companySize--;
-            for (int i = index; i < companySize; i++) {
-                Employee temp = employees.get(i);
-                temp.setCount(temp.getCount() - 1);
-            }
-        } else {
-            System.out.println("\n" + companyName + " already has zero employees");
+        employees.remove(index);
+        companySize--;
+        for (int i = index; i < companySize; i++) {
+            Employee temp = employees.get(i);
+            temp.setCount(temp.getCount() - 1);
         }
     }
     public void printEmployee(int index) {
@@ -56,6 +52,8 @@ public class Company {
             case 3 -> temp.setJobTitle();
             case 4 -> temp.setBirthday();
         }
+
+        printEmployee(index);
     }
     public static int checkValidInput(Scanner input, int max) {
         int userVal;
