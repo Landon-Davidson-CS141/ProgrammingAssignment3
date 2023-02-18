@@ -11,6 +11,9 @@ public class EmployeeManagementSystem {
             System.out.print("How many companies would you like to create? ");
             if (input.hasNextInt()) {
                 numCompanies = input.nextInt();
+                if (numCompanies < 1) {
+                    System.out.println("Please enter an integer higher than 0");
+                }
             } else {
                 input.next();
                 System.out.println("Please enter an integer higher than 0");
