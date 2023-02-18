@@ -12,6 +12,7 @@ public class EmployeeManagementSystem {
             if (input.hasNextInt()) {
                 numCompanies = input.nextInt();
             } else {
+                input.next();
                 System.out.println("Please enter an integer higher than 0");
             }
         } while (numCompanies < 1);
@@ -44,6 +45,7 @@ public class EmployeeManagementSystem {
                 case 2 -> removeEmployee(companies, input);
                 case 3 -> updateEmployee(companies, input);
                 case 4 -> printNumEmployees(companies, input);
+                case 5 -> printEmployeeInfo(companies, input);
 
             }
         } while (userAction != 6);
@@ -139,6 +141,27 @@ public class EmployeeManagementSystem {
         } else {
             Company temp = companies[userCompany];
             System.out.println(temp.getCompanyName() + " has " + temp.getCompanySize() + " employees");
+        }
+    }
+    public static void printEmployeeInfo(Company[] companies, Scanner input) {
+        System.out.println("1. Info for all employees in the system");
+        for (int i = 0; i < companies.length; i++) {
+            System.out.println(i + 2 + ". Info of Employees in " + companies[i].getCompanyName());
+        }
+
+        int userCompany;
+        do {
+            System.out.print("Which company would you like to see info on? ");
+            userCompany = Company.checkValidInput(input, companies.length + 1);
+        } while (userCompany == -1);
+        userCompany -= 2;
+
+        if (userCompany == -1) {
+            for (Company company : companies) {
+                company.printAllEmployees();
+            }
+        } else {
+            companies[userCompany].printAllEmployees();
         }
     }
 }
